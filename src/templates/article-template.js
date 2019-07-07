@@ -6,10 +6,18 @@ import RelatedArticle from '../components/relatedArticle.js';
 import { graphql } from 'gatsby';
 
 class ArticleTemplate extends Component {
-  const windowGlobal = typeof window !== 'undefined' && window
+
 
   state = {
-    likes: parseInt(windowGlobal.localStorage.getItem(this.props.data.contentfulStory.slug))
+    likes: 0
+  }
+
+  componentDidMount() {
+    const windowGlobal = typeof window !== 'undefined' && window
+
+    this.setState({
+      likes: parseInt(windowGlobal.localStorage.getItem(this.props.data.contentfulStory.slug))
+    })
   }
 
   likeArticle = () => {
