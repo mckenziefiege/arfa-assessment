@@ -1,0 +1,152 @@
+@arfa-color: saturate(rgb(222, 98, 72), 30%);
+
+html {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.articles {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.article {
+  margin: 20px;
+  list-style: none;
+  display: flex;
+  width: 900px;
+  justify-content: space-between;
+
+  &__text-container {
+    width: 600px;
+  }
+
+  p {
+    margin: 5px;
+    font-family: 'Crimson Text', serif;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__image {
+    width:350px;
+    height: 220px;
+  }
+
+  &__company {
+    color: @arfa-color;
+  }
+
+  &__title {
+    font-size: 25px;
+    color: black;
+    margin: 5px;
+    font-family: 'DM Serif Display', serif;
+  }
+
+  &__author {
+    color: black;
+  }
+
+  &__subtitle {
+    color: black;
+  }
+
+  &__likes {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    color: black;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  svg {
+    height: 15px;
+    width: 15px;
+    margin: 5px;
+  }
+
+
+}
+
+.chosen-article {
+
+
+  &__content {
+    font-family: 'Crimson Text', serif;
+    margin-bottom: 50px;
+    font-size: 20px;
+
+    a {
+      color: black;
+    }
+  }
+
+  &__title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 40px;
+    margin: 30px 0 0 0;
+  }
+
+  &__related-content {
+    font-family: 'Crimson Text', serif;
+
+    p {
+      border-bottom: 2px solid black;
+      font-size: 20px;
+      text-transform: uppercase;
+      padding: 5px;
+    }
+  }
+
+  &__related-article {
+    font-size: 18px;
+    color: @arfa-color;
+    font-weight: bold;
+  }
+
+  &__image {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+  }
+
+  &__likes-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__likes {
+
+  }
+
+  &__button {
+    border: none;
+    cursor: pointer;
+    color: @arfa-color;
+    outline: none;
+  }
+
+  svg {
+    height: 15px;
+    width: 15px;
+    margin: 5px;
+  }
+}
+
+.back {
+  color: @arfa-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
