@@ -21,8 +21,8 @@ class ArticleTemplate extends Component {
   }
 
   likeArticle = () => {
-    let num = parseInt(windowGlobal.localStorage.getItem(this.props.data.contentfulStory.slug))
-    windowGlobal.localStorage.setItem(this.props.data.contentfulStory.slug, num + 1)
+    let num = parseInt(window.localStorage.getItem(this.props.data.contentfulStory.slug))
+    window.localStorage.setItem(this.props.data.contentfulStory.slug, num + 1)
     this.setState({
       likes: num + 1
     })
